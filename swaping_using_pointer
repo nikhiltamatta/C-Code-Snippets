@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+    int x=3;
+    int y=5;
+    printf("%d %d",x,y);
+    swap(&x,&y);
+    printf("\n%d %d",x,y);
+}
+int swap(int*p,int*q)
+{
+    int t=0;
+    t=*p;
+    *p=*q;
+    *q=t;
+}
