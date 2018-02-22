@@ -19,7 +19,7 @@ main()
     l=p[0];
     for(i=0;i<5;i++)
     {
-        if(l<*(p+i));
+        if(l<*(p+i))
         {
             l=*(p+i);
         }
