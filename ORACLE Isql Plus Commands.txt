@@ -1,0 +1,46 @@
+create table Nikhil777
+(
+SID number(10),
+FN Varchar(10),
+LN Varchar(10),
+Age number(2),
+DOB date
+);
+
+
+
+insert into Nikhil777
+values('11706349','Nikhil','Tamatta','22','22-Apr-95');
+values('11700162','Devesh','Gaur','18','04-Apr-2000');
+values('11708960','Satya','Tiwari','18','13-Oct-99');
+values('11709836','Ramandeep','Kaur','21','03-Jan-96');
+values('11706345','Parul','Banga','21','22-Aug-96');
+
+
+
+ALTER TABLE Nikhil777
+ADD HEIGHT INT;
+ADD ADDRESS INT;
+
+ALTER TABLE Nikhil777
+drop column ADDRESS;
+
+UPDATE Nikhil777
+set HEIGHT=20
+where SID=11708960
+
+
+UPDATE Nikhil777
+set HEIGHT=25
+where SID=11709836 OR SID=11706345
+
+
+
+DELETE from Nikhil777
+where SID=11706345
+
+
+RENAME NIKHIL777 to Nikhil786
+
+
+DROP table Nikhil786
