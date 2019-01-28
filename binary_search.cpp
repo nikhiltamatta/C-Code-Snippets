@@ -29,6 +29,7 @@ int main()
         cout<<"\nLocation of Variable:"<<t;
     }
     else
-        {cout<<"\nDATA NOT FOUND";
-}
+        {
+        cout<<"\nDATA NOT FOUND";
+        }
 }
