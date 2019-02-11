@@ -101,6 +101,10 @@ void Display()
 {
     struct  node *r;
     r=p;
+    if(p==NULL)
+    {
+        printf("\nLinked List is empty.");
+    }
     while(r!=NULL)
     {
         printf("\n%d",r->data);
@@ -118,14 +122,20 @@ void Delend()
         }
         else
         {
-            while(r1->next!=NULL)
-            {
+             if(r->next==NULL)
+             {
+               p=NULL;
+             }
+             else
+             {
+             while(r1->next!=NULL)
+             {
                 r=r->next;
                 r1=r1->next;
-            }
-            r->next=NULL;
-            free(r1);
-
+             }
+             r->next=NULL;
+             free(r1);
+             }
         }
 }
 void Delafter(int num)
@@ -161,44 +171,44 @@ void main()
     while(1)
     {
         printf("\nMenu:-");
-        printf("\n1.Insertion at Beginning");
+        printf("\n1.Insertion at begining");
         printf("\n2.Insertion at End");
-        printf("\n3.Insertion after a Node");
-        printf("\n4.Deletion at Beginning");
+        printf("\n3.Insertion after a node");
+        printf("\n4.Deletion at begining");
         printf("\n5.Deletion at End");
-        printf("\n6.Deletion after a Node");
+        printf("\n6.Deletion after a node");
         printf("\n7.Display");
         printf("\nEnter a Choice:");
         scanf("%d",&choice);
         switch(choice)
         {
-            case 1:printf("\nEnter Number you want to Insert at Beginning:");
+            case 1:printf("\nEnter number you want to insert at begining:");
                    scanf("%d",&num);
                    Addatbeg(num);
-                   printf("\nNumber is Inserted at Beginning");
+                   printf("\nNumber is inserted at begining");
                    break;
-            case 2:printf("\nEnter Number you want to Insert at End:");
+            case 2:printf("\nEnter number you want to insert at end:");
                    scanf("%d",&num);
                    Addatend(num);
-                   printf("\nNumber is Inserted at End");
+                   printf("\nNumber is inserted at end");
                    break;
-            case 3:printf("\nEnter Number you want to Insert:");
+            case 3:printf("\nEnter number you want to insert:");
                    scanf("%d",&num);
-                   printf("\nEnter Number after that you want to Insert:");
+                   printf("\nEnter number after that you want to insert:");
                    scanf("%d",&num1);
                    Addafter(num,num1);
-                   printf("\nNumber is Inserted after the given Number");
+                   printf("\nNumber is inserted after the given number");
                    break;
             case 4:Delbeg();
-                   printf("\nNumber is Deleted at Beginning");
+                   printf("\nNumber is deleted at begining");
                    break;
             case 5:Delend();
-                   printf("\nNumber is Deleted at End");
+                   printf("\nNumber is deleted at end");
                    break;
-            case 6:printf("\nEnter the Number after which you want to Delete:");
+            case 6:printf("\nEnter the number after which you want to delete:");
                    scanf("%d",&num);
                    Delafter(num);
-                   printf("\nNumber is Deleted After");
+                   printf("\nNumber is deleted after");
                    break;
             case 7:Display();
                    break;
