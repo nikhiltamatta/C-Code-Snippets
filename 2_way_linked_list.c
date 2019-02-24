@@ -1,5 +1,4 @@
 //
-//  main.c
 //  Two Way Linked List
 //
 //  Created by Nikhil Tamatta on 24/02/19.
